@@ -51,7 +51,7 @@ const Url = mongoose.model('Url', urlSchema);
 // Connect to MongoDB with retry mechanism
 const connectWithRetry = () => {
   // mongoose.connect('mongodb://localhost:27017/url-shortner', { [ ...For local host connection ]
-  mongoose.connect('mongodb+srv://aadityagunjal0975:pFHVow9cFqjBW7w3@cluster0.psityjt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+  mongoose.connect('mongodb+srv://aadityagunjal0975:JCOUpMryxweDyDZk@cluster0.fbfgt8t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -428,4 +428,5 @@ app.get('/:code', async (req, res) => {
 const PORT = process.env.PORT || 3002;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
 });
